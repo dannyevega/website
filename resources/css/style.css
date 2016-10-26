@@ -1,0 +1,245 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+html,
+body {
+	font-family: 'Assistant', sans-serif;
+	background-color: #F1F1F1;
+	color: #555;
+	font-weight: 300;
+	font-size: 20px;
+	text-rendering: optimizeLegibility;
+}
+
+/* -------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* -------------------------------------------- */
+.section {
+	height: 100vh;
+}
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.box {
+	padding: 2%;
+}
+
+h2 {
+	margin-bottom: 4%;
+	text-transform: uppercase;
+	color: #999;
+	font-weight: 100;
+}
+
+.clearfix { zoom: 1; }
+.clearfix:after {
+	content: " ";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+/* -------------------------------------------- */
+/* FIRST SECTION */
+/* -------------------------------------------- */
+.hello {
+	font-size: 400%;
+	letter-spacing: 0.03em;
+	color: #FFF;
+	text-align: center;
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	height: 140px;
+	width: 240px;
+	margin-top: -30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cursor {
+	font-weight: 100;
+	font-size: 60px;
+    border-left: 5px solid #555;
+    margin-left: 5px;
+    -webkit-animation: 1.5s blink step-end infinite;
+    -moz-animation: 1.5s blink step-end infinite;
+    animation: 1.5s blink step-end infinite;
+}
+
+@keyframes blink {
+	from, to { border-color: transparent; }
+	50% { border-color: #555; }
+}
+
+@-webkit-keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #555; }
+}
+
+@-moz-keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #555; }
+}
+
+
+
+/* -------------------------------------------- */
+/* ABOUT SECTION */
+/* -------------------------------------------- */
+#rose {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://hd.unsplash.com/photo-1456659122552-6ee1788174bb");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://hd.unsplash.com/photo-1456659122552-6ee1788174bb");
+	background-size: cover;
+	background-position: center;
+}
+
+#rose p {
+	line-height: 200%;
+	font-size: 110%;
+	letter-spacing: 1.5px;
+	color: #FFF;
+	font-weight: 100;
+}
+
+
+
+/* -------------------------------------------- */
+/* WORK SECTION */
+/* -------------------------------------------- */
+.projects-row {
+	list-style: none;
+	width: 100%;
+}
+
+.projects-row li {
+	display: block;
+	float: left;
+	width: 31.3%;
+	margin: 1%;
+}
+
+.project-photo {
+	width: 100%;
+	overflow: hidden;
+	height: 200px;
+	position: relative;
+	float: left;
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/black-gradient.png);
+	background: -ms-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/black-gradient.png);
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/black-gradient.png);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    -ms-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.project-photo:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.project-photo h2 {
+	visibility: hidden;
+	opacity: 0;
+	color: #FFF;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 130%;
+	transform: translate(-50%, -50%);
+	-webkit-transition: visibility 0.75s, opacity 0.5s linear;
+	-ms-transition: visibility 0.75s, opacity 0.5s linear;
+	transition: visibility 0.75s, opacity 0.5s linear;
+}
+
+.project-photo:hover h2 {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+/* -------------------------------------------- */
+/* FOOTER */
+/* -------------------------------------------- */
+#footer {
+	height: 40% !important;
+}
+
+#footer .row:last-child {
+	margin-top: 3%;
+}
+
+#footer .row:last-child p {
+	font-size: 60%;
+	color: #FFF;
+}
+
+.footer-nav {
+	list-style: none;
+	float: left;
+}
+
+#footer .row:last-child p,
+.footer-nav li {
+	font-weight: 100;
+}
+
+.footer-nav li {
+	display: inline-block;
+	margin-right: 45px;
+}
+
+.footer-nav li:last-child {
+	margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited {
+	text-decoration: none;
+	color: #FFF;
+	-webkit-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+	color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
